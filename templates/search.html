@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>python Finale</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/reset.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+  <div class="wrap_content">
+      <h1 class="text_title"><a href={{ url_for("home") }}></a>Searching Result : <span class="text_desc">{{word}}</span></h1>  
+      
+      <div class="box_numbers clearFix">
+          <div class="box_each_num">
+            <span class="text_site">search {{word}} in Stackoverflow</span>
+            <span class="text_num">{{so_num}}</span>
+          </div>
+          <div class="box_each_num">
+            <span class="text_site">search {{word}} in weworkremotely</span>
+            <span class="text_num">{{ww_num}}</span>
+          </div>
+          <div class="box_each_num">
+            <span class="text_site">search {{word}} in remoteok</span>
+            <span class="text_num">{{ro_num}}</span>
+          </div>
+          <div class="box_each_num last">
+            <span class="text_site">total</span>
+            <span class="text_num">{{total}}</span>
+          </div>
+          <a class="button" href="/export?word={{word}}">💾 EXPORT TO CSV</a>
+    </div>
+    <div class="wrap_jobs clearFix">
+      <div class="wrap_job">
+          <p class="text_subTitle">search {{word}} in Stack OverFlow, {{so_num}}</p>
+          {% if jobs_so %}      
+          <ul class="list_jobs">
+              {% for job in jobs_so %}
+              <li>
+                <p class="text_1">{{job.get("title")}}</p>
+                <div class="wrap_text">
+                  <p class="text_2">{{job.get("company")}}</p>
+                  <p class="text_3">{{job.get("location")}}</p>
+                </div>
+                <a class="text_4" href="{{job.get("apply_link")}}" target="_blank">Go Apply</a>
+              </li>
+              {% endfor %}
+          </ul>
+          {% else %}
+          <p>No result for {{word}} in stackoverflow </p>
+          {% endif %}
+      </div>
+
+      <div class="wrap_job">
+          <p class="text_subTitle">search {{word}} in We Work Remotely, {{ww_num}}</p>    
+          {% if jobs_ww %}      
+          <ul class="list_jobs">
+              {% for job in jobs_ww %}
+              <li>
+                <p class="text_1">{{job.get("title")}}</p>
+                <div class="wrap_text">
+                  <p class="text_2">{{job.get("company")}}</p>
+                  <p class="text_3">{{job.get("location")}}</p>
+                </div>
+                <a class="text_4" href="{{job.get("apply_link")}}" target="_blank">Go Apply</a>
+              </li>
+              {% endfor %}
+          </ul>
+          {% else %}
+          <p>No result for {{word}} in We Work Remotely</p>
+          {% endif %}
+      </div>
+
+      <div class="wrap_job">
+          <p class="text_subTitle">search {{word}} in Remote Ok, {{ro_num}}</p>
+          {% if jobs_ro %}      
+          <ul class="list_jobs">
+              {% for job in jobs_ro %}
+              <li>
+                <p class="text_1">{{job.get("title")}}</p>
+                <div class="wrap_text">
+                  <p class="text_2">{{job.get("company")}}</p>
+                  <p class="text_3">{{job.get("location")}}</p>
+                </div>
+                <a class="text_4" href="{{job.get("link")}}" target="_blank">Go Apply</a>
+              </li>
+              {% endfor %}
+          </ul>
+          {% else %}
+          <p>No result for {{word}} in Remote Ok</p>
+          {% endif %}
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

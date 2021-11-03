@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>python Finale</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/reset.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="wrap_main">
+      <div class="box_texts_main">
+        <p class="text_tilte">Searching for Remote Jobs</p>
+        <p class="text_tilte_desc">in stackoverflow.com</p>
+        <p class="text_tilte_desc">in weworkremotely.com</p>
+        <p class="text_tilte_desc">in remoteok.io</p>
+      </div>
+      <div class="box_form">
+        <form id="myForm" action="/search">    
+          <input id="term-input" type="text" name="word" placeholder="i.e python">
+          <button type="submit">Find Jobs</button>
+        </form>    
+      </div>
+    </div>
+
+  </div>
+</body>
+
+</html>

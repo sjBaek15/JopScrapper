@@ -1,0 +1,36 @@
+.clearFix:after {content:"";display:block;width:0;height:0;overflow:hidden;clear:both;}
+
+body {font-family: 'Roboto', sans-serif;}
+
+.wrap_main {position: relative;width: 600px;margin: 60px auto 0;padding: 20px 20px 20px;border: 1px solid #ccc;background: #edcfa9;box-sizing: border-box;box-shadow: 5px 4px 10px #aa4a30;}
+.box_texts_main {position: relative;padding: 14px 20px 14px;background: #fff;box-sizing: border-box;}
+.text_tilte {position: relative;font-size: 30px;font-weight: 700;color: #333;}
+.text_tilte_desc {position: relative;margin-top: 14px;font-size: 25px;color: #333;}
+
+.box_form {position: relative;margin-top: 38px}
+.box_form input {width: 100%;height: 50px;padding-left: 10px;padding-right: 110px;font-size: 19px;border: 1px solid #aa4a30;box-sizing: border-box;}
+.box_form input:focus {outline: #aa4a30}
+.box_form button {position: absolute;width: 90px;height: 40px;font-size: 15px;color: #fff;border: none;outline: none;background: #aa4a30;border-radius: 5px;top: 5px;right: 10px;}
+
+
+.wrap_content {position: relative;width: 1200px;margin:0 auto 60px;}
+.text_title {padding-top: 30px; font-size: 20px;}
+.text_title .text_desc {color: #ff4b5c;}
+
+.box_numbers {position: relative;padding-bottom: 60px;padding-top: 60px;font-size: 0;text-align: center;}
+.box_each_num {display: inline-block;padding: 20px 0 20px;width: 20%;vertical-align: top;box-sizing: border-box;border-top: 1px solid #edcfa9;border-bottom: 1px solid #edcfa9;border-left: 1px solid #edcfa9;}
+.box_each_num.last {border-right: 1px solid #edcfa9;}
+.box_each_num .text_site {display: block;font-size: 16px;}
+.box_each_num .text_num {display: block;padding-top: 20px;font-size: 47px;font-weight: 700;color: #ff4b5c;}
+.box_numbers .button {position: absolute;font-size: 16px;bottom: 0;left: 119px;cursor: pointer;}
+
+.wrap_jobs {padding: 30px 15px 30px;margin-top: 50px;border: 1px solid #aa4a30;box-sizing: border-box;background: #edcfa9;}
+.wrap_job {float: left;width: 33.333%;background: #fff;}
+.text_subTitle {margin-top: 20px;margin-left: 10px;font-size: 20px;font-weight: 700;color: #333;}
+.list_jobs {overflow-y: auto;margin-top: 25px;padding: 0 10px 10px;height: 600px;box-sizing: border-box;}
+.list_jobs li {position: relative;padding: 10px 0 30px;border-bottom: 1px dashed #aa4a30;}
+.list_jobs .text_1 {font-size: 19px;line-height: 1.2;}
+.list_jobs .wrap_text {margin-top: 15px;font-size: 0;text-align: left;}
+.list_jobs .text_2 {display: inline-block;font-size: 16px;}
+.list_jobs .text_3 {display: inline-block;margin-left: 14px;font-size: 16px;}
+.list_jobs .text_4 {position: absolute;padding: 7px 7px 7px;font-size: 14px;color: #fff;border: 1px solid #aa4a30;background: #edcfa9;bottom: 9px;right: 0;}
